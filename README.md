@@ -2,24 +2,34 @@
 
 ## Overview:
 
-Sample API for the doctors of any hospital which has allocated by the govt. for testing and quarantine + well being of COVID-19 patients.
+Sample API for the doctors of any hospital which was allocated by the govt. for testing and quarantine + well being of COVID-19 patients.Used Node.JS,Passport-JWT(for authentication) and MongoDB.
 
 ## API Endpoints:
 
+#### Common Entry point:
+
+- [http://localhost:8000/api/v1]
+
+## Options:
+
 #### Doctors:
 
-- /doctors/register
-- /doctors/login
+
+- [/doctors/register]  --> to register doctor (required: name,email,password) 
+- [/doctors/login]   --> to login doctor (returns JWT token) 
+
+
+## required JWT Token generated above to access below endpoints:
 
 #### Patients:
 
-- /patients/register
-- /patients/:id/create_report
-- /patients/:id/all_reports
+- [/patients/register]  ---> to register patient
+- [/patients/:id/create_report]
+- [/patients/:id/all_reports]
 
 #### Reports:
 
-- /reports/:status
+- [/reports/:status]
 
 ## Steps to run locally:
 
