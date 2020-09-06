@@ -8,28 +8,31 @@ Sample API for the doctors of any hospital which was allocated by the govt. for 
 
 #### Common Entry point:
 
-- [http://localhost:8000/api/v1]
+- http://localhost:8000/api/v1
 
 ## Options:
 
 #### Doctors:
 
+- /doctors/register --> to register doctor (required fields : 'name','email','password')
 
-- [/doctors/register]  --> to register doctor (required: name,email,password) 
-- [/doctors/login]   --> to login doctor (returns JWT token) 
-
+- /doctors/login --> to login doctor(required fields : 'email','password') --> returns JWT Token.
 
 ## required JWT Token generated above to access below endpoints:
 
 #### Patients:
 
-- [/patients/register]  ---> to register patient
-- [/patients/:id/create_report]
-- [/patients/:id/all_reports]
+- /patients/register ---> to register patient (required fields : 'name', 'contact')
+
+- /patients/:id/create_report ---> to create testing report by patient's ID (required fields : 'status')
+
+  status valid options : ['Negative', 'Travelled-Quarantine','Symptoms-Quarantine', 'Positive-Admit']
+
+- /patients/:id/all_reports ---> return all patient's reports by passing patient ID.(oldest to latest)
 
 #### Reports:
 
-- [/reports/:status]
+- /reports/:status --> return all the reports of all the patients filtered by a specific status.(valid status options as mentioned above)
 
 ## Steps to run locally:
 
