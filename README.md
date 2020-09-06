@@ -18,7 +18,7 @@ Sample API for the doctors of any hospital which was allocated by the govt. for 
 
 - /doctors/login --> to login doctor(required fields : 'email','password') --> returns JWT Token.
 
-## required JWT Token generated above to access below endpoints:
+- #### required JWT Token generated above to access below endpoints:
 
 #### Patients:
 
