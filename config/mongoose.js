@@ -12,7 +12,7 @@ mongoose.connect('mongodb://localhost/hospitalAPI_db', {
 // getting the db instance from the mongoose connection
 const db = mongoose.connection;
 
-// binding error to console in case of db conncection fails.
+// binding error to console in case of db connection fails.
 db.on('error', console.error.bind(console, 'Error connecting to MongoDB'));
 
 // starting the db connection
