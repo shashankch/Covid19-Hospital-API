@@ -16,9 +16,6 @@ const passport = require('passport');
 // import passport jwt strategy
 const passportJWT = require('./config/passport-jwt-strategy');
 
-// import bcrypt to encrypt password before storing in db
-const Bcrypt = require('bcrypt');
-
 // to parse form data
 app.use(express.urlencoded({ extended: true }));
 
